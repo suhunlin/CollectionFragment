@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/guess_1a2b_bg"
+    android:paddingVertical="4dp"
+    tools:context=".F3Fragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Guess 1A2B"
+        android:textSize="28sp"
+        android:gravity="center_horizontal"
+        android:layout_alignParentTop="true"
+        />
+    <RelativeLayout
+        android:id="@+id/topLine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        >
+        <Button
+            android:id="@+id/guess"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Guess"
+            android:textSize="20sp"
+            android:layout_alignParentRight="true"
+            />
+        <EditText
+            android:id="@+id/userInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/guess"
+            android:layout_alignParentLeft="true"
+            android:layout_alignTop="@id/guess"
+            android:layout_alignBottom="@id/guess"
+            android:hint="Please input number"
+            android:inputType="phone"
+            />
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/bottomLine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        >
+        <Button
+            android:id="@+id/restart"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Restart"
+            android:textAllCaps="false"
+            android:layout_margin="4dp"
+            />
+        <Button
+            android:id="@+id/setting"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Setting"
+            android:textAllCaps="false"
+            android:layout_margin="4dp"
+            />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/log"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/topLine"
+        android:layout_above="@id/bottomLine"
+        />
+</RelativeLayout>
